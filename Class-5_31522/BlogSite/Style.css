@@ -1,0 +1,46 @@
+﻿body {
+    padding-top: 56px;
+}
+
+:root{
+    --primary: #11bbe1;
+    --secondary: #237d7a;
+    --light: #1e1a1b
+}
+
+.logo_img{
+    height:40px;
+    width: auto;
+}
+
+.img-slide {
+    height: 500px;
+    width: 100%;
+}
+.img-slide{
+    height: 500px;
+    width: 100%;
+}
+.section-heading{
+    text-align: center;
+    text-transform: uppercase;
+    color: #0094ff;
+    font-weight: 500;
+}
+.footer_section{
+    position:relative;
+}
+.topper {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    background: #ff6a00;
+    bottom: 50px;
+    right: 15px;
+    border-radius: 25%;
+    padding: 12px 12px 21px 15px;
+}
+
+.nav_color{
+    background: var(--primary);
+}

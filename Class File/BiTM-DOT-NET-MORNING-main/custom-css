@@ -1,0 +1,57 @@
+body {
+    padding-top: 51px !important;
+}
+
+:root{
+    --primary:#0b97de;
+    --secondary:#095c8d;
+    --light:#cbe4fc;
+    --white:#fff;
+}
+.carousel-inner{
+    height:400px !important;
+}
+.navbar-brand img{
+    width:150px;
+}
+img.card-img-top {
+    height: 250px !important;
+}
+.footer_section{
+    position:relative;
+}
+.topper {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    background: #ff6a00;
+    bottom: 50px;
+    right: 15px;
+    border-radius: 12%;
+    padding: 12px;
+}
+
+a.navbar-brand {
+    padding: 0;
+}
+
+nav.navbar.navbar-expand-lg.bg-dark.navbar-dark.fixed-top {
+    padding: 4px 0px;
+}
+
+.topper .fa-angle-up {
+    font-size: 30px;
+    color: #fff;
+    line-height: 24px;
+}
+
+.navbar.bg-dark, .footer_top {
+    background-color: var(--primary) !important;
+}
+
+.footer_section .bg-black {
+    background-color: var(--secondary) !important;
+}
+#action, #faq{
+    color: var(--white) !important;
+}
