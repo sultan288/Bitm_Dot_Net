@@ -78,6 +78,7 @@
     <Content Include="assets\img\undraw_profile_2.svg" />
     <Content Include="assets\img\undraw_profile_3.svg" />
     <Content Include="assets\img\undraw_rocket.svg" />
+    <Content Include="assets\img\Users\1.png" />
     <Content Include="assets\js\demo\chart-area-demo.js" />
     <Content Include="assets\js\demo\chart-bar-demo.js" />
     <Content Include="assets\js\demo\chart-pie-demo.js" />

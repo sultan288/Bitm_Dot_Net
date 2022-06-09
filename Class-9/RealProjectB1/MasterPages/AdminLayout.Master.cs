@@ -11,7 +11,13 @@ namespace RealProjectB1.MasterPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                lblUserName.Text = Session["userName"].ToString();
+                string userid = Session["userId"].ToString(); 
+             
+                imgUser.ImageUrl = "~/assets/img/Users/" + userid + ".png";
+            }
         }
     }
 }

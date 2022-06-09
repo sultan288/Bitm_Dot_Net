@@ -13,21 +13,71 @@ namespace RealProjectB1.Authentication
         {
             if (!IsPostBack)
             {
-                divMsg.Visible = false;
+                
             }   
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text!="" && txtPassword.Text!="")
+            if (CheckFieldValue() == false)
             {
-                string userName = txtUsername.Text;
-                string password = txtPassword.Text;
+                if (txtUsername.Text == "admin" && txtPassword.Text == "123")
+                {
+                    Session["userId"] = "1";
+                    Session["userName"] = "Admin";
+                    Response.Redirect("~/AdminHome.aspx");
+
+                }
+                else
+                {
+                    divMsg.Visible = true;
+                    lblMsg.Text = "Incorrect Username or Password";
+                }
+            }
+
+            /*string userName = txtUsername.Text;
+            string password = txtPassword.Text;
+
+            if (userName !="" && password !="")
+            {               
                 if (userName == "admin" && password =="123")
                 {
+                    
                     Response.Redirect("~/AdminHome.aspx");
                 }
             }
+            else
+            {
+                lblMsg.Text = "Incorrect Username or Password";
+                divMsg.Visible = true;
+            }*/
         }
+
+        private bool CheckFieldValue()
+        {
+            bool IsReq = false;
+
+            if (txtUsername.Text == "")
+            {
+                IsReq = true;
+                lblMsg.Text = "Username can't be empty";
+            }
+            else if (txtPassword.Text == "")
+            {
+                IsReq = true;
+                lblMsg.Text = "password can't be empty";
+            }
+            if (IsReq == true)
+            {
+                divMsg.Visible = true;
+            }
+            else
+            {
+                divMsg.Visible = false;
+            }
+
+            return IsReq;
+        }
+
     }
 }
