@@ -14,8 +14,16 @@ namespace RealProjectB1.auth
             if (!IsPostBack)
             {
                 divMsg.Visible = false;
+                RememberCookie();
+            }           
+        }
+        private void RememberCookie()
+        {
+            if (Request.Cookies["UserName"] != null && Request.Cookies["Password"] != null)
+            {
+                txtUsername.Text = Request.Cookies["UserName"].Value;
+                txtPassword.Attributes["Value"] = Request.Cookies["Password"].Value;
             }
-           
         }
 
         protected void btnLogin1_Click(object sender, EventArgs e)
@@ -26,6 +34,7 @@ namespace RealProjectB1.auth
                 {
                     Session["UserId"] = "1";
                     Session["UserName"] = "Admin";
+                    SetCookie();
                     Response.Redirect("~/AdminHome.aspx");
                 }
                 else
@@ -35,6 +44,27 @@ namespace RealProjectB1.auth
                 }
             }
            
+        }
+        private void SetCookie()
+        {
+            HttpCookie mycookie = new HttpCookie("mycookie");
+            mycookie["UserName"] = txtUsername.Text.Trim();
+            mycookie["Password"] = txtPassword.Text.Trim();
+
+            Response.Cookies.Add(mycookie);
+
+            if (chkRememberMe.Checked)
+            {
+                Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(3);
+                Response.Cookies["password"].Expires = DateTime.Now.AddDays(3);
+            }
+            else
+            {
+                Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
+            }
+            Response.Cookies["UserName"].Value = txtUsername.Text.Trim();
+            Response.Cookies["Password"].Value = txtPassword.Text.Trim();
         }
 
         private bool CheckFieldValue()

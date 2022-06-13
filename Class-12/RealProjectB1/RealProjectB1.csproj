@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs.aspx" />
     <Content Include="AdminHome.aspx" />
     <Content Include="assets\css\custom-style.css" />
     <Content Include="assets\css\sb-admin-2.css" />
@@ -1758,9 +1759,17 @@
     <Content Include="DataTableContents\DataTable1.aspx" />
     <Content Include="Student\StudentRegistration.aspx" />
     <Content Include="test.aspx" />
+    <Content Include="TestOne.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminHome.aspx.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1817,6 +1826,13 @@
     </Compile>
     <Compile Include="test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestOne.aspx.cs">
+      <DependentUpon>TestOne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestOne.aspx.designer.cs">
+      <DependentUpon>TestOne.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

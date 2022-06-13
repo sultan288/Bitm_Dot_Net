@@ -32,10 +32,14 @@
 
                             <div class="input-group flex-nowrap mt-4">
                                 <span class="input-group-text" id=""><i class="fas fa-lock"></i></span>
+
                                 <asp:TextBox ID="txtPassword"  runat="server" CssClass ="form-control" placeholder="Password" TextMode="Password"></asp:TextBox>
+
                             </div>
                             <div class="form-check mt-2">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+
+
+                            <asp:CheckBox ID="chkRememberMe" runat="server" CssClass="form-check-input"/>                                                           
                               <label class="form-check-label" for="flexCheckDefault">
                                 Remember
                               </label>

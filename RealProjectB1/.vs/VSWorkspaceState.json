@@ -1,5 +1,9 @@
 {
-  "ExpandedNodes": [],
-  "SelectedNode": "\\RealProjectB1.sln",
+  "ExpandedNodes": [
+    "",
+    "\\Authentication",
+    "\\Student"
+  ],
+  "SelectedNode": "\\Student\\StudentRegistrationForm.aspx",
   "PreviewInSolutionExplorer": false
 }
